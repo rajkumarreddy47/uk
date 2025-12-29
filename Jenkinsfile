@@ -10,8 +10,8 @@ pipeline {
 
         stage('Read File') {
             steps {
-                bat 'echo Reading uk.txt'
-                bat 'type uk.txt'
+                bat 'echo Reading uk.text'
+                bat 'type uk.text'
             }
         }
     }
