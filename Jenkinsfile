@@ -11,13 +11,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'echo Build stage running'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'echo Test stage running'
+                bat 'mvn -version'
+                bat 'mvn clean package'
             }
         }
 
