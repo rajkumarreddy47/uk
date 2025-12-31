@@ -1,5 +1,4 @@
-pipeline {
-    agent any
+ agent any
 
     stages {
 
@@ -9,10 +8,18 @@ pipeline {
             }
         }
 
+        stage('Read File') {
         stage('Build') {
             steps {
-                bat 'mvn -version'
-                bat 'mvn clean package'
+                bat 'echo Reading uk.text'
+                bat 'type uk.text'
+                bat 'echo Build stage running'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'echo Test stage running'
             }
         }
 
